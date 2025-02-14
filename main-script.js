@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                console.log("Observed:", entry.target); // Debug: log each observed element
+                console.log("Observed:", entry.target);
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target); // Stop observing
+                    observer.unobserve(entry.target); 
                 }
             });
         },
         {
-            root: null, // Default to viewport
-            threshold: 0.5, // Trigger when 50% of the element is visible
+            root: null, 
+            threshold: 0.5, 
         }
     );
 
